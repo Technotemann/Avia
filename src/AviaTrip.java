@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 public class AviaTrip {
 
     public static void main(String[] args) {
-        List<DefaultFilter> defaultFilters = new ArrayList<>();
-        defaultFilters.add(DefaultFilter.DEFAULT);
+//        List<DefaultFilter> defaultFilters = new ArrayList<>();
+//        defaultFilters.add(DefaultFilter.DEFAULT);
         List<CustomFilter> customFilters = new ArrayList<>();
         customFilters.add(CustomFilter.CUSTOM1);
         customFilters.add(CustomFilter.CUSTOM2);
         customFilters.add(CustomFilter.CUSTOM3);
-        System.out.println(filter(FlightBuilder.createFlights(), defaultFilters,  customFilters.get(0)));
-        System.out.println(filter(FlightBuilder.createFlights(), defaultFilters,  customFilters.get(1));
-        System.out.println(filter(FlightBuilder.createFlights(), defaultFilters, customFilters.get(2)));
+        System.out.println(filter(FlightBuilder.createFlights(), Collections.emptyList(),  customFilters.get(0)));
+        System.out.println(filter(FlightBuilder.createFlights(), Collections.emptyList(),  customFilters.get(1));
+        System.out.println(filter(FlightBuilder.createFlights(), Collections.emptyList(), customFilters.get(2)));
     }
 
     public static List<Flight> filter(@NotNull List<Flight> flights, @NotNull List<DefaultFilter> defaultFilters, @NotNull List<CustomFilter> customFilters) {
